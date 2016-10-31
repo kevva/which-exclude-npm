@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "ava": "*",
+    "ext-name-cli": "^1.0.0",
     "xo": "*"
   },
   "xo": {
