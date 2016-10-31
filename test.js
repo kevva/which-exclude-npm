@@ -12,3 +12,7 @@ test('throw if no binary is found', async t => {
 test('throw if binary installed by npm is found', async t => {
 	t.throws(m('npm-which'), 'Found global binary installed by npm');
 });
+
+test('name is required', async t => {
+	t.throws(m(), 'Expected a `string`, got `undefined`');
+});
