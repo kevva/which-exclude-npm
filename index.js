@@ -10,24 +10,20 @@ module.exports = name => {
 
 	const errMsg = 'Found global binary installed by npm';
 
-	return pify(which)(name)
-		.catch(err => {
-			throw err;
+	return pify(which)(name).then(pth => npmInstalled(name)
+		.then(res => {
+			if (pth === res) {
+				throw new Error(errMsg);
+			}
+
+			return pth;
 		})
-		.then(pth => npmInstalled(name)
-			.then(res => {
-				if (pth === res) {
-					throw new Error(errMsg);
-				}
+		.catch(err => {
+			if (err.message.includes(errMsg)) {
+				throw err;
+			}
 
-				return pth;
-			})
-			.catch(err => {
-				if (err.message.includes(errMsg)) {
-					throw err;
-				}
-
-				return pth;
-			})
-		);
+			return pth;
+		})
+	);
 };
