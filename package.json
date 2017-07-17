@@ -1,41 +1,38 @@
 {
-  "name": "which-exclude-npm",
-  "version": "1.0.0",
-  "description": "Find non npm installed binaries in PATH",
-  "license": "MIT",
-  "repository": "kevva/which-exclude-npm",
-  "author": {
-    "name": "Kevin Martensson",
-    "email": "kevinmartensson@gmail.com",
-    "url": "github.com/kevva"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "bin",
-    "global",
-    "npm",
-    "path",
-    "program"
-  ],
-  "dependencies": {
-    "npm-installed": "^2.0.1",
-    "pify": "^2.3.0",
-    "which": "^1.2.11"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "ext-name-cli": "^1.0.0",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "which-exclude-npm",
+	"version": "1.0.0",
+	"description": "Find non npm installed binaries in PATH",
+	"license": "MIT",
+	"repository": "kevva/which-exclude-npm",
+	"author": {
+		"name": "Kevin Martensson",
+		"email": "kevinmartensson@gmail.com",
+		"url": "github.com/kevva"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"bin",
+		"global",
+		"npm",
+		"path",
+		"program"
+	],
+	"dependencies": {
+		"npm-installed": "^2.0.2",
+		"pify": "^3.0.0",
+		"which": "^1.2.11"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"ext-name-cli": "^1.0.0",
+		"xo": "*"
+	}
 }

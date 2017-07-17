@@ -8,9 +8,10 @@ module.exports = name => {
 		return Promise.reject(new TypeError(`Expected a \`string\`, got \`${typeof name}\``));
 	}
 
-	const errMsg = 'Found global binary installed by npm';
+	const errMsg = 'Found global binary installed by `npm`';
 
-	return pify(which)(name).then(pth => npmInstalled(name)
+	return pify(which)(name)
+		.then(pth => npmInstalled(name)
 		.then(res => {
 			if (pth === res) {
 				throw new Error(errMsg);
@@ -24,6 +25,5 @@ module.exports = name => {
 			}
 
 			return pth;
-		})
-	);
+		}));
 };

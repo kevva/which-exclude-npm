@@ -1,12 +1,12 @@
 # which-exclude-npm [![Build Status](https://travis-ci.org/kevva/which-exclude-npm.svg?branch=master)](https://travis-ci.org/kevva/which-exclude-npm)
 
-> Find non npm installed binaries in PATH
+> Find non npm installed binaries in `PATH`
 
 
 ## Install
 
 ```
-$ npm install --save which-exclude-npm
+$ npm install which-exclude-npm
 ```
 
 
@@ -31,7 +31,7 @@ whichExcludeNpm('np').catch(err => {
 
 ### whichExcludeNpm(name)
 
-Returns a `Promise` with the path to the binary. Rejects if a global binary can't be found or if the binary is installed with npm.
+Returns a `Promise` with the path to the binary. Rejects if a global binary can't be found or if the binary was installed with `npm`.
 
 #### name
 
@@ -42,4 +42,4 @@ Binary name.
 
 ## License
 
-MIT © [Kevin Martensson](https://github.com/kevva)
+MIT © [Kevin Mårtensson](https://github.com/kevva)

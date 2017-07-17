@@ -1,18 +1,18 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 test('find global binary', async t => {
 	t.truthy(await m('bash'));
 });
 
 test('throw if no binary is found', async t => {
-	t.throws(m('non-existing'));
+	await t.throws(m('non-existing', 'not found: non-existing'));
 });
 
 test('throw if binary installed by npm is found', async t => {
-	t.throws(m('ext-name'), 'Found global binary installed by npm');
+	await t.throws(m('ext-name'), 'Found global binary installed by `npm`');
 });
 
 test('name is required', async t => {
-	t.throws(m(), 'Expected a `string`, got `undefined`');
+	await t.throws(m(), 'Expected a `string`, got `undefined`');
 });
