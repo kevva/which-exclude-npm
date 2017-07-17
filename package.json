@@ -1,6 +1,6 @@
 {
 	"name": "which-exclude-npm",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Find non npm installed binaries in PATH",
 	"license": "MIT",
 	"repository": "kevva/which-exclude-npm",
